@@ -21,3 +21,4 @@ for (let i = 0; i < collection.length; i += 1) {
     <hr>`;
 }
 collectionList.innerHTML = allContent;
+
