@@ -1,0 +1,48 @@
+body, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+.book {
+  list-style: none;
+  padding: 1em;
+}
+
+.author {
+  margin: 1em;
+}
+
+.title {
+  margin: 1em;
+}
+
+.collection {
+  padding: 1em;
+}
+
+#form-element {
+  padding: 1em;
+}
+
+.title-input {
+  display: block;
+  margin: 1em;
+}
+.author-input {
+  display: block;
+  margin: 1em;
+}
+
+.add-btn {
+  margin: 0 1em;
+  padding: .3em;
+}
+.remove-btn {
+  margin: 0 1em;
+  padding: .3em;
+}
