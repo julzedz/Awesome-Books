@@ -1,0 +1,23 @@
+{
+  "name": "awesome-books",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julzedz/Awesome-Books.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julzedz/Awesome-Books/issues"
+  },
+  "homepage": "https://github.com/julzedz/Awesome-Books#readme",
+  "devDependencies": {
+    "hint": "^7.1.2"
+  }
+}
