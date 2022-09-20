@@ -27,19 +27,3 @@ function addToDOM() {
   removefromDOM();
 }
 
-function removefromDOM() {
-  const removeBtn = document.querySelectorAll('.remove-btn');
-  removeBtn.forEach((elem, index) => {
-    elem.addEventListener('click', () => {
-      elem.parentNode.remove();
-      books.splice(index,1);
-    })
-  })
-}
-
-window.addEventListener('load', () => {
-if (localStorage.getItem('books')) {
-  books = JSON.parse(localStorage.getItem('books'))
-}
-addToDOM();
-})
