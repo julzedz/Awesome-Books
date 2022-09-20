@@ -10,6 +10,7 @@ addBtn.addEventListener('click', () => {
     author: authorInput.value,
   }
   books.push(bookObject);
+  localStorage.setItem('books', JSON.stringify(books));
   addToDOM()
 })
 
@@ -36,5 +37,4 @@ function removefromDOM() {
   })
 }
 
-  localStorage.setItem('books', JSON.stringify(books));
   let storedBooks = JSON.parse(localStorage.getItem('books'));
