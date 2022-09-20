@@ -4,15 +4,16 @@ const authorInput = document.querySelector('.author-input');
 const addBtn = document.querySelector('.add-btn')
 let books = [];
 
-addBtn.addEventListener('click', () => {
-  const bookObject = {
-    title: titleInput.value,
-    author: authorInput.value,
-  }
-  books.push(bookObject);
-  localStorage.setItem('books', JSON.stringify(books));
-  addToDOM()
-})
+function removefromDOM() {
+  const removeBtn = document.querySelectorAll('.remove-btn');
+  removeBtn.forEach((elem, index) => {
+    elem.addEventListener('click', () => {
+      elem.parentNode.remove();
+      books.splice(index,1);
+      localStorage.setItem("books", JSON.stringify(books));
+    })
+  })
+}
 
 function addToDOM() {
   let box = '';
@@ -27,16 +28,15 @@ function addToDOM() {
   removefromDOM();
 }
 
-function removefromDOM() {
-  const removeBtn = document.querySelectorAll('.remove-btn');
-  removeBtn.forEach((elem, index) => {
-    elem.addEventListener('click', () => {
-      elem.parentNode.remove();
-      books.splice(index,1);
-      localStorage.setItem("books", JSON.stringify(books));
-    })
-  })
-}
+addBtn.addEventListener('click', () => {
+  const bookObject = {
+    title: titleInput.value,
+    author: authorInput.value,
+  }
+  books.push(bookObject);
+  localStorage.setItem('books', JSON.stringify(books));
+  addToDOM()
+})
 
 window.addEventListener('load', () => {
 if (localStorage.getItem('books')) {
