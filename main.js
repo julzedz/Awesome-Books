@@ -37,4 +37,9 @@ function removefromDOM() {
   })
 }
 
-  let storedBooks = JSON.parse(localStorage.getItem('books'));
+window.addEventListener('load', () => {
+if (localStorage.getItem('books')) {
+  books = JSON.parse(localStorage.getItem('books'))
+}
+addToDOM();
+})
