@@ -1,33 +1,40 @@
-const form = document.querySelector('form');
 const collection = document.querySelector('.collection');
 const titleInput = document.querySelector('.title-input');
 const authorInput = document.querySelector('.author-input');
 const addBtn = document.querySelector('.add-btn')
 let books = [];
 
-function addBtnFunction() {
-  
+addBtn.addEventListener('click', () => {
+  const bookObject = {
+    title: titleInput.value,
+    author: authorInput.value,
+  }
+  books.push(bookObject);
+  addToDOM()
+})
+
+function addToDOM() {
+  let box = '';
+  for(let i = 0; i< books.length; i += 1){
+    box += `<li class="book">
+      <p class="title">${books[i].title}</p>
+      <p class="author">${books[i].author}</p>
+      <button class="remove-btn">Remove</button>
+    </li>`;
+  }
+  collection.innerHTML = box;
+  removefromDOM();
 }
 
+function removefromDOM() {
+  const removeBtn = document.querySelectorAll('.remove-btn');
+  removeBtn.forEach((elem, index) => {
+    elem.addEventListener('click', () => {
+      elem.parentNode.remove();
+      books.splice(index,1);
+    })
+  })
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-// create a function for li content
-// function bookInput({title, author}) {
-//   return `<li class="book">
-//       <p class="title">${title}</p>
-//       <p class="author">${author}</p>
-//       <button class="remove-btn">Remove</button>
-//     </li>
-//     <hr>`;
-// }
+  localStorage.setItem('books', JSON.stringify(books));
+  let storedBooks = JSON.parse(localStorage.getItem('books'));
