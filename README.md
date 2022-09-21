@@ -17,19 +17,6 @@
 
 **To set up, clone the project on your local system, and run it using a web browser.**
 
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
 
 ## Authors
 
