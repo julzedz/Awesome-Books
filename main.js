@@ -17,7 +17,8 @@ function removefromDOM() {
 
 function addToDOM() {
   let box = '';
-  for (let i = 0; i < books.length; i += 1) {
+  let bookLength = books.length;
+  for (let i = 0; i < bookLength; i += 1) {
     box += `<li class="book">
       <p class="title">${books[i].title}</p>
       <p class="author">${books[i].author}</p>
