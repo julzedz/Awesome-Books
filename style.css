@@ -11,15 +11,15 @@ h1 {
 
 .book {
   list-style: none;
-  padding: 1em;
+  padding: .1em;
 }
 
 .author {
-  margin: 1em;
+  margin: .1em;
 }
 
 .title {
-  margin: 1em;
+  margin: .1em;
 }
 
 .collection {
@@ -42,10 +42,10 @@ h1 {
 
 .add-btn {
   margin: 0 1em;
-  padding: 0.3em;
+  padding: 0.1em;
 }
 
 .remove-btn {
-  margin: 0 1em;
-  padding: 0.3em;
+  margin: 0 .1em;
+  padding: 0.1em;
 }

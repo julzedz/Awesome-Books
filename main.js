@@ -12,29 +12,64 @@ class UI {
     const storedBooks = [
       {
         title: "book 1",
-        author: "Jul Doe",
+        author: "auth1",
       },
       {
-        title: "book 3",
-        author: "Pab Doe",
-      },
+        title: "book 2",
+        author: "auth2",
+      }
     ];
     const books = storedBooks;
-
     books.forEach((book) => UI.addBookToList(book));
   }
   static addBookToList(book) {
     const list = document.querySelector(".collection");
+    list.innerHTML += `<li class='book'>
+    <p class='title'>${book.title}</p>
+    <p class="author">${book.author}</p>
+    <button class="remove-btn">Remove</button>
+    </li>`;
+    UI.deleteBook();
+  }
+
+  static deleteBook() {
+    const removeBtn = document.querySelectorAll(".remove-btn");
+    removeBtn.forEach((elem) => {
+      elem.addEventListener("click", () => {
+        elem.parentNode.remove();
+      });
+    });
+  }
+
+  static clearField() {
+    document.querySelector('.title-input').value = '';
+    document.querySelector('.author-input').value = '';
   }
 }
 
 // Store Class
 
 // Event: Display Books
+document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
 // Event: Add a Book
+const addBtn = document.querySelector('.add-btn');
+addBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  //get values
+  const title = document.querySelector('.title-input').value;
+  const author = document.querySelector('.author-input').value;
+  // Instantiate a book
+  const aNewBook = new Book(title, author);
 
-// Event: Remove a Book
+  // Add book to UI
+  UI.addBookToList(aNewBook);
+
+  // Clear field
+  UI.clearField();
+});
+
+
 
 
 
