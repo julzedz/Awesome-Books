@@ -36,7 +36,7 @@ h2 {
   width: 70%;
   margin: 0 auto;
   padding: 1em;
-  background: #11c1ee;
+  border: 3px solid black;
 }
 
 #form-element {
@@ -44,18 +44,29 @@ h2 {
 }
 
 .title-input {
-  display: block;
   margin: 1em;
+  border: 3px solid black;
+  width: 200px;
+}
+
+#book-det {
+  display: grid;
+  grid-template-rows: 60px 60px 20px;
+  justify-content: center;
 }
 
 .author-input {
   display: block;
   margin: 1em;
+  width: 200px;
+  border: 3px solid black;
 }
 
 .add-btn {
   margin: 0 1em;
   padding: 0.1em;
+  width: 40px;
+  border: 3px solid black;
 }
 
 .remove-btn {
@@ -67,4 +78,14 @@ h2 {
   margin: 0 auto;
   width: 100%;
 
+}
+
+#form-title {
+  font-size: 25px;
+  text-align: center;
+}
+
+#space {
+  display: flex;
+  justify-content: space-evenly;
 }
