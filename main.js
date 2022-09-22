@@ -48,3 +48,18 @@ class Book {
   }
 }
 
+function addToDOM() {
+  let box = '';
+  let bookLength = books.length;
+  for (let i = 0; i < bookLength; i += 1) {
+    box += `<li class="book">
+      <p class="title">${books[i].title} by</p>
+      <p class="author">${books[i].author}</p>
+      <button class="remove-btn">Remove</button>
+    </li>`;
+  }
+  collection.innerHTML = box;
+  Book.removeBook();
+  Book.clearField();
+}
+
