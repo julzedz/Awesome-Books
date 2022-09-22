@@ -53,7 +53,7 @@ function addToDOM() {
   let bookLength = books.length;
   for (let i = 0; i < bookLength; i += 1) {
     box += `<li class="book">
-      <p class="title">${books[i].title}</p>
+      <p class="title">${books[i].title} by</p>
       <p class="author">${books[i].author}</p>
       <button class="remove-btn">Remove</button>
     </li>`;

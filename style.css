@@ -10,6 +10,7 @@ h1 {
 }
 
 .book {
+  display: flex;
   list-style: none;
   padding: .1em;
 }
