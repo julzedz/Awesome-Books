@@ -9,17 +9,7 @@ class Book {
 // UI Class: For UI tasks
 class UI {
   static displayBooks() {
-    const storedBooks = [
-      {
-        title: "book 1",
-        author: "auth1",
-      },
-      {
-        title: "book 2",
-        author: "auth2",
-      }
-    ];
-    const books = storedBooks;
+    let books = Store.getBooks();
     books.forEach((book) => UI.addBookToList(book));
   }
   static addBookToList(book) {
@@ -48,6 +38,23 @@ class UI {
 }
 
 // Store Class
+class Store {
+  static getBooks() {
+    let books;
+    if (localStorage.getItem('books') === null) {
+      books = [];
+    } else {
+      books = JSON.parse(localStorage.getItem('books'));
+    }
+    return books;
+  }
+
+  static addBooks(book) {
+    const books = Store.getBooks();
+    books.push(book)
+    localStorage.setItem('books', JSON.stringify('books'));
+  }
+}
 
 // Event: Display Books
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
@@ -64,6 +71,10 @@ addBtn.addEventListener('click', (e) => {
 
   // Add book to UI
   UI.addBookToList(aNewBook);
+
+  // Add book to store
+  Store.addBooks(aNewBook);
+
 
   // Clear field
   UI.clearField();
