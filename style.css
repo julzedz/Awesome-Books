@@ -7,18 +7,20 @@ body,
 
 main {
   width: 100%;
-  background: #d1d1d1;
 }
 
 h2 {
   text-align: center;
+  margin: 1em;
 }
 
 .book {
   width: 100%;
   display: flex;
   list-style: none;
-  padding: .1em;
+  padding: .5em;
+  background: #919090;
+
 }
 
 .author {
@@ -35,8 +37,10 @@ h2 {
   flex-direction: column;
   width: 70%;
   margin: 0 auto;
-  padding: 1em;
+  padding: 0;
   border: 3px solid black;
+  background: #f1f0f0;
+
 }
 
 #form-element {
@@ -77,7 +81,8 @@ h2 {
 .collection-section {
   margin: 0 auto;
   width: 100%;
-
+  background: #d1d1d1;
+  padding: 1em;
 }
 
 #form-title {
@@ -87,5 +92,6 @@ h2 {
 
 #space {
   display: flex;
-  justify-content: space-evenly;
+  width: 100%;
+  justify-content: space-between;
 }
