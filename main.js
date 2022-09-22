@@ -2,16 +2,17 @@ const collection = document.querySelector('.collection');
 const title = document.querySelector('.title-input');
 const author = document.querySelector('.author-input');
 const addBtn = document.querySelector('.add-btn');
-let books = JSON.parse(localStorage.getItem('books')) || [];
+// let books = JSON.parse(localStorage.getItem('books')) || [];
 
 class Book {
   constructor(title, author) {
     this.title = title;
     this.author = author;
+    this.books = JSON.parse(localStorage.getItem('books')) || [];
   }
 
-  addBooks() {
-    books.push(this);
+  addBooks(title,author) {
+    this.books.push({title,author});
   }
 
   static removeBook() {
