@@ -5,17 +5,24 @@ body,
   box-sizing: border-box;
 }
 
-h1 {
+main {
+  width: 100%;
+  background: #d1d1d1;
+}
+
+h2 {
   text-align: center;
 }
 
 .book {
+  width: 100%;
   display: flex;
   list-style: none;
   padding: .1em;
 }
 
 .author {
+  
   margin: .1em;
 }
 
@@ -24,7 +31,12 @@ h1 {
 }
 
 .collection {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
   padding: 1em;
+  background: #11c1ee;
 }
 
 #form-element {
@@ -49,4 +61,10 @@ h1 {
 .remove-btn {
   margin: 0 .1em;
   padding: 0.1em;
+}
+
+.collection-section {
+  margin: 0 auto;
+  width: 100%;
+
 }
