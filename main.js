@@ -65,9 +65,16 @@ window.addEventListener('load', () => {
   Book.addBooks();
 });
 
-document.querySelector('#ContactPage')
-document.querySelector('.form')
-document.querySelector('.collection-section')
+const listPage = document.querySelector('.collection-section')
+const formPage = document.querySelector('.form')
+const contactPage = document.querySelector('#ContactPage')
 const list = document.querySelector(".list-book-nav");
 const addNav = document.querySelector(".add-book-nav");
 const contactNav = document.querySelector(".contact-nav");
+const date = document.querySelector(".date");
+
+list.addEventListener('click', () => {
+  listPage.style.display = 'block';
+  
+
+})
