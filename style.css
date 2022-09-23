@@ -68,11 +68,6 @@ ul {
   display: none;
 }
 
-#form-title {
-  font-size: 25px;
-  text-align: center;
-}
-
 #space {
   display: flex;
   width: 100%;
@@ -135,9 +130,7 @@ nav {
 #ContactPage {
   display: none;
   padding: 2em;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
   background: #f2eaea;
   height: 85vh;
   width: 100vw;
@@ -151,10 +144,13 @@ nav {
 #ContactPage p {
   margin: 0 auto;
   text-align: left;
+  width: fit-content;
+
 }
 
 #ContactPage ul {
   margin: 0 auto;
+  width: fit-content;
 }
 
 footer {
