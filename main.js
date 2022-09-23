@@ -1,47 +1,66 @@
+import Books from './booksClass.js';
+
 const collection = document.querySelector('.collection');
-const titleInput = document.querySelector('.title-input');
-const authorInput = document.querySelector('.author-input');
+const title = document.querySelector('.title-input');
+const author = document.querySelector('.author-input');
 const addBtn = document.querySelector('.add-btn');
-let books = [];
+const newBook = new Books();
+let { books } = newBook;
 
-function removefromDOM() {
-  const removeBtn = document.querySelectorAll('.remove-btn');
-  removeBtn.forEach((elem, index) => {
-    elem.addEventListener('click', () => {
-      elem.parentNode.remove();
-      books.splice(index, 1);
-      localStorage.setItem('books', JSON.stringify(books));
-    });
-  });
-}
-
-function addToDOM() {
-  let box = '';
-  let bookLength = books.length;
-  for (let i = 0; i < bookLength; i += 1) {
-    box += `<li class="book">
-      <p class="title">${books[i].title}</p>
-      <p class="author">${books[i].author}</p>
-      <button class="remove-btn">Remove</button>
-    </li>`;
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+    this.books = JSON.parse(localStorage.getItem('books'));
   }
-  collection.innerHTML = box;
-  removefromDOM();
+
+  static addBooks() {
+    let box = '';
+    const bookLength = books.length;
+    for (let i = 0; i < bookLength; i += 1) {
+      box += `<li class="book">
+      <div id="space">
+      <p class="title">${books[i].title} by ${books[i].author}</p>
+      <button class="remove-btn" id="${i}">Remove</button>
+      </div>
+      </li>`;
+    }
+    collection.innerHTML = box;
+    this.removeBook();
+    this.clearField();
+  }
+
+  static removeBook() {
+    const removeBtn = document.querySelectorAll('.remove-btn');
+    removeBtn.forEach((elem) => {
+      elem.addEventListener('click', () => {
+        elem.parentNode.parentNode.remove();
+        const index = elem.id;
+        books.splice(index, 1);
+        localStorage.setItem('books', JSON.stringify(books));
+        Book.addBooks();
+      });
+    });
+  }
+
+  static clearField() {
+    document.querySelector('.title-input').value = '';
+    document.querySelector('.author-input').value = '';
+  }
 }
 
 addBtn.addEventListener('click', () => {
-  const bookObject = {
-    title: titleInput.value,
-    author: authorInput.value,
-  };
+  const titleValue = title.value;
+  const authorValue = author.value;
+  const bookObject = new Book(titleValue, authorValue);
   books.push(bookObject);
+  Book.addBooks();
   localStorage.setItem('books', JSON.stringify(books));
-  addToDOM();
 });
 
 window.addEventListener('load', () => {
   if (localStorage.getItem('books')) {
     books = JSON.parse(localStorage.getItem('books'));
   }
-  addToDOM();
+  Book.addBooks();
 });

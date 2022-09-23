@@ -8,19 +8,45 @@
   <title>Awesome Books</title>
 </head>
 <body>
-<main>
-  <h1>Awesome Books</h1>
-  <section class="collection-section">
-    <ul class="collection">
-    
+    <nav>
+    <h1>Awesome Books</h1>
+    <ul>
+      <li class="list-book-page">List</li>
+      <li class="add-book-page">Add Book</li>
+      <li class="contact-page">Contact</li>
     </ul>
+  </nav>
+<main>
+  <section class="collection-section">
+    <h2>All Awesome Books</h2>
+    <ul class="collection">
+
+    </ul>
+  </section>
+  <section>
     <form onclick="return false;" id="form-element" method="post">
+      <legend id="form-title">Add a new book</legend>
+      <div id="book-det">
       <input type="text" class="title-input" placeholder="Title">
       <input type="text" class="author-input" placeholder="Author">
       <button class="add-btn">Add</button>
+      </div>
     </form>
-  </section>
+    </section>
+    <section id="ContactPage">
+      <h2>Contact information</h2>
+      <p>Do you have any questions or you just want to say "Hello"?<br>You can reach out to us!</p>
+      <ul>
+        <li>Our e-mail: mail@mail.com</li>
+        <li>Our phone: 00435286200928</li>
+        <li>Our address: Streetname 22, 83560 City, Country</li>
+      </ul>
+    </section>
 </main>
-  <script src="./main.js"></script>
+<footer>
+    <p>Copyright &copy; <span class="year"></span> Divyansh Singh and Julian Chukwuma</p>
+  </footer>
+  <script type="module" src="./main.js"></script>
+  <script type="module" src="./booksClass.js"></script>
 </body>
 </html>
