@@ -92,3 +92,26 @@ h2 {
   width: 100%;
   justify-content: space-between;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5em;
+  border: 3px solid black;
+  padding: 0 1rem;
+  height: 10vh;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  border: 3px solid black;
+  padding: 0 1rem;
+  height: 8vh;
+  width: 100%;
+  gap: 1em;
+}
