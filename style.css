@@ -80,6 +80,7 @@ h2 {
   width: 100%;
   background: #d1d1d1;
   padding: 1em;
+  /* display: none; */
 }
 
 #form-title {
@@ -106,7 +107,7 @@ header {
 .nav {
   display: flex;
   list-style: none;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
   align-items: center;
   border: 3px solid black;
@@ -114,4 +115,20 @@ header {
   height: 8vh;
   width: 100%;
   gap: 1em;
+}
+
+nav {
+  width: 50%;
+}
+
+.form {
+  /* display: none; */
+}
+
+#ContactPage {
+/* display: none; */
+}
+
+footer {
+  background: #e2e0e0;
 }
