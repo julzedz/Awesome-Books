@@ -68,3 +68,6 @@ window.addEventListener('load', () => {
 document.querySelector('#ContactPage')
 document.querySelector('.form')
 document.querySelector('.collection-section')
+const list = document.querySelector(".list-book-nav");
+const addNav = document.querySelector(".add-book-nav");
+const contactNav = document.querySelector(".contact-nav");
