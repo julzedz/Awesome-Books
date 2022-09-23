@@ -4,7 +4,6 @@ const collection = document.querySelector('.collection');
 const title = document.querySelector('.title-input');
 const author = document.querySelector('.author-input');
 const addBtn = document.querySelector('.add-btn');
-// let books = JSON.parse(localStorage.getItem("books")) || [];
 
 class Book {
   constructor(title, author) {
