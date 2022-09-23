@@ -161,11 +161,3 @@ footer {
   width: 100%;
   text-align: center;
 }
-
-  .visible {
-    display: block !important;
-  }
-
-    .hidden {
-    display: none;
-  }

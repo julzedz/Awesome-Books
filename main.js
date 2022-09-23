@@ -75,6 +75,16 @@ const date = document.querySelector(".date");
 
 list.addEventListener('click', () => {
   listPage.style.display = 'block';
-  
+  formPage.style.display = 'none';
+  contactPage.style.display = 'none';
+});
 
+addNav.addEventListener('click', () => {
+  formPage.style.display = 'block';
+  listPage.style.display = 'none';
+  contactPage.style.display = 'none';
+});
+
+contactNav.addEventListener('click', () => {
+  contactPage.style.display = 
 })
