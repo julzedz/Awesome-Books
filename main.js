@@ -86,5 +86,7 @@ addNav.addEventListener('click', () => {
 });
 
 contactNav.addEventListener('click', () => {
-  contactPage.style.display = 
+  contactPage.style.display = 'block';
+  listPage.style.display = 'none';
+  contactPage.style.display = 'none';
 })
