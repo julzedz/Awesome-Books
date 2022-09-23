@@ -64,3 +64,7 @@ window.addEventListener('load', () => {
   }
   Book.addBooks();
 });
+
+document.querySelector('#ContactPage')
+document.querySelector('.form')
+document.querySelector('.collection-section')
