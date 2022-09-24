@@ -5,11 +5,6 @@ body,
   box-sizing: border-box;
 }
 
-body {
-  /* background: #c2b6b6; */
-;
-}
-
 header {
   display: flex;
   justify-content: space-between;
@@ -34,7 +29,7 @@ nav {
   justify-content: space-evenly;
   text-align: center;
   align-items: center;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   height: 8vh;
   width: 100%;
   gap: 1em;
@@ -42,10 +37,6 @@ nav {
 
 .nav li {
   cursor: pointer;
-}
-
-.nav li:hover {
-  color: blue;
 }
 
 main {
@@ -65,9 +56,9 @@ ul {
 .collection-section {
   margin: 0 auto;
   width: 100%;
-  min-height: 85vh;
+  min-height: 80vh;
   background: #c2b6b6;
-  padding: 1em;  
+  padding: 1em;
 }
 
 .collection {
@@ -85,6 +76,10 @@ ul {
   display: flex;
   padding: 0.5em;
   background: #a8a6a6;
+}
+
+.book:nth-child(even) {
+  background-color: #e0dede;
 }
 
 #space {
@@ -110,16 +105,17 @@ ul {
 .form {
   display: none;
   background: #c2b6b6;
-  height: 85vh;
+  height: 80vh;
   margin: 0;
   padding: 1em;
 }
 
 #form-element {
-margin: 0 auto;}
+  margin: 0 auto;
+}
 
 #book-det {
-  margin:0 auto;
+  margin: 0 auto;
   width: fit-content;
 }
 
@@ -127,14 +123,14 @@ margin: 0 auto;}
   margin: 1em;
   border: 3px solid black;
   width: 30vw;
-  padding: .5em;
+  padding: 0.5em;
 }
 
 .author-input {
   display: block;
   margin: 1em;
   width: 30vw;
-  padding: .5em;
+  padding: 0.5em;
   border: 3px solid black;
 }
 
@@ -150,20 +146,24 @@ margin: 0 auto;}
   padding: 2em;
   margin: 0 auto;
   background: #c2b6b6;
-  height: 85vh;
+  height: 80vh;
   width: 100vw;
 }
 
-.ContactPage ul li, .ContactPage p{
+.ContactPage ul li,
+.ContactPage p {
   font-size: 1.2em;
   line-height: 1.5em;
+}
+
+.nav li:hover {
+  color: blue;
 }
 
 .ContactPage p {
   margin: 0 auto;
   text-align: left;
   width: fit-content;
-
 }
 
 .ContactPage ul {
@@ -178,7 +178,7 @@ footer {
   background: #fff;
 }
 
-.displaye{
+.displaye {
   color: blue;
   font-size: 1.2em;
   font-weight: 600;
@@ -187,7 +187,7 @@ footer {
 .date {
   font-size: 1.1em;
   font-weight: 600;
-  padding-top: .3em;
+  padding-top: 0.3em;
   padding-right: 3em;
   text-align: right;
 }
