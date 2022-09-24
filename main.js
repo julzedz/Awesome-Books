@@ -99,3 +99,5 @@ contactNav.addEventListener('click', () => {
   list.classList.remove('displaye');
   addNav.classList.remove('displaye')
 });
+
+document.querySelector(".date").innerHTML = Date().toLocaleString();

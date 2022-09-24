@@ -6,7 +6,7 @@ body,
 }
 
 body {
-  background: #c2b6b6;
+  /* background: #c2b6b6; */
 ;
 }
 
@@ -65,7 +65,7 @@ ul {
 .collection-section {
   margin: 0 auto;
   width: 100%;
-  height: auto;
+  min-height: 85vh;
   background: #c2b6b6;
   padding: 1em;  
 }
@@ -182,4 +182,12 @@ footer {
   color: blue;
   font-size: 1.2em;
   font-weight: 600;
+}
+
+.date {
+  font-size: 1.1em;
+  font-weight: 600;
+  padding-top: .3em;
+  padding-right: 3em;
+  text-align: right;
 }
