@@ -34,6 +34,14 @@ nav {
   gap: 1em;
 }
 
+.nav li {
+  cursor: pointer;
+}
+
+.nav li:hover {
+  color: blue;
+}
+
 main {
   width: 100%;
 }
@@ -130,7 +138,7 @@ margin: 0 auto;}
   border: 3px solid black;
 }
 
-#ContactPage {
+.ContactPage {
   display: none;
   padding: 2em;
   margin: 0 auto;
@@ -139,19 +147,19 @@ margin: 0 auto;}
   width: 100vw;
 }
 
-#ContactPage ul li, #ContactPage p{
+.ContactPage ul li, .ContactPage p{
   font-size: 1.2em;
   line-height: 1.5em;
 }
 
-#ContactPage p {
+.ContactPage p {
   margin: 0 auto;
   text-align: left;
   width: fit-content;
 
 }
 
-#ContactPage ul {
+.ContactPage ul {
   margin: 0 auto;
   width: fit-content;
 }
@@ -160,4 +168,10 @@ footer {
   height: 5vh;
   width: 100%;
   text-align: center;
+}
+
+.displaye{
+  color: blue;
+  font-size: 1.2em;
+  font-weight: 600;
 }

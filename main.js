@@ -67,7 +67,7 @@ window.addEventListener('load', () => {
 
 const listPage = document.querySelector('.collection-section')
 const formPage = document.querySelector('.form')
-const contactPage = document.querySelector('#ContactPage')
+const contactPage = document.querySelector('.ContactPage')
 const list = document.querySelector(".list-book-nav");
 const addNav = document.querySelector(".add-book-nav");
 const contactNav = document.querySelector(".contact-nav");
@@ -88,5 +88,6 @@ addNav.addEventListener('click', () => {
 contactNav.addEventListener('click', () => {
   contactPage.style.display = 'block';
   listPage.style.display = 'none';
-  contactPage.style.display = 'none';
-})
+  formPage.style.display = 'none';
+});
+console.log(contactPage)
