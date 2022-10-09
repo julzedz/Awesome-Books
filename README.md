@@ -3,7 +3,7 @@
 
 
 
-> A dynamic collection of books using JavaScript.
+> This project lets you compile a dynamic collection of books using JavaScript. It is a single page app. You enter your book title & author in the Add Book section, and it appears on the List section.
 
 
 ## Built With
@@ -16,6 +16,9 @@
 ## Getting Started
 
 **To set up, clone the project on your local system, and run it using a web browser.**
+
+## Live Demo Link
+View live link [here](https://julzedz.github.io/Awesome-Books/)
 
 
 ## Authors
