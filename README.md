@@ -3,7 +3,7 @@
 
 
 
-> This project lets you compile a dynamic collection of books using JavaScript. It is a single page app. You enter your book title & author in the Add Book section, and it appears on the List section.
+> This application lets you compile a dynamic collection of books using JavaScript. It is a single page app. You enter your book title & author in the Add Book section, and it appears on the List section.
 
 
 ## Built With
